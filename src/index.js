@@ -1,12 +1,18 @@
 import React from 'react'
-import ReactDom from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import Header from './Header.jsx'
+import Main from './Main'
 
 
-const root =ReactDom.createRoot(document.getElementById('root'));
+
+const root =ReactDOM.createRoot(document.getElementById('root'))
+
 root.render(
- <React.StrictMode>
-<h1>Hello React</h1>
- </React.StrictMode>
-  
+    <React.StrictMode>
+        <Header name='Header'/>
+<Main/>
 
+
+    </React.StrictMode>
 )
