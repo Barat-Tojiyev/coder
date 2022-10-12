@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.app{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+.app button{
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.app input{
+    display: block;
+    width: 40%;
+}
+h2{
+    text-align: left;
+}
