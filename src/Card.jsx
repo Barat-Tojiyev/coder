@@ -11,7 +11,6 @@ class Card extends Component {
         }
     }
     render() {
-
         const onSearch =(e)=>{
        const{value}=e.target
        const res =data.filter((item)=>item[this.state.select].toString().toLowerCase().includes(value.toLowerCase()))
@@ -23,8 +22,8 @@ class Card extends Component {
         
 
         const onDelete=(id)=>{
-const res =this.state.object.filter((value)=> value.id !== id)
-this.setState({object:res})
+  const res =this.state.object.filter((value)=> value.id !== id)
+  this.setState({object:res})
         }
 
         const onInputAdd = (e)=>{
