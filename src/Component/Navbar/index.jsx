@@ -2,8 +2,11 @@ import React from 'react'
 import {   Logo, NavbarBox,Button,Count,Bascet } from './style'
 import Logotip from './icon/logo.svg'
 import basketIcon from './icon/basketIcon.svg'
+import { useContext } from 'react'
+import { ProductContext } from '../../context'
 
 export const Navbar = () => {
+  const [state,dispatch]=useContext(ProductContext)
   return (  
  <NavbarBox>
   <Logo><img src={Logotip} alt="#" /> Greenshop</Logo>
@@ -12,9 +15,9 @@ export const Navbar = () => {
     <NavbarBox.LI>Shop</NavbarBox.LI>
   </NavbarBox.UL>
   <Bascet>
-    <Bascet>
+    <Bascet onClick={()=>dispatch({type:'basket'})}>
        <img src={basketIcon} alt="" />
-       <Count>0</Count>
+       <Count>{state.basket.length}</Count>
     </Bascet>
    
     <Button>login</Button>
